@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 id="title">Practice_1: JS with Web</h1>
+  <h2 id="subtitle"></h2>
+  <h1>Second H1</h1>
+  <p class="text text-1">1</p>
+  <p class="text">2</p>
+  <p class="text">3</p>
+  <p class="text">4</p>
+  <p class="text">5</p>
+  <input id='set_placeholder' type="text">
+  <button class="button" onclick="document.getElementById('button1').innerHTML = 'Button is clicked'">Click Me!</button>
+  <button class="button" onclick="this.innerHTML='button is clicked'">Click Me!</button>
+  <button class="button" onclick="displayDate()">Display Date</button>
+  <p id="button1"></p>
+  <h2 id="date"></h2>
+  <div id="container" style="border: 2px solid blue; height: 200px;"></div>
+  <div id="container1" style="border: 2px solid rgb(255, 0, 72); height: 200px;"></div>
+  <div id="mcd">
+    Dummy Content
+    <h1>Multiple Child Div</h1>
+    <h1>Child 2</h1>
+    <h1>Child 3</h1>
+  </div>
+</body>
+<script>
+  // Finding HTML Elements
+  console.log(document.getElementById('subtitle'));
+  document.getElementById('subtitle').innerHTML = 'Get Element By Id';
+  document.getElementById('subtitle').innerText = 'Get Element By Id using innerText';
+  const h1 = document.getElementsByTagName('h1');
+  console.log(h1);
+  const className = document.getElementsByClassName('text');
+  console.log(className);
+  // End - Finding HTML Elements
+  className[2].innerText = 'Access at index 2'
+  className[2].className = `${className[2].className} boldBlueText`
+  // className[3].classList = ['boldBlueText']
+  className[3].classList = ['boldBlueText'];
+  console.log(className[2].className)
+  const input = document.getElementById('set_placeholder');
+  input.setAttribute('placeholder','Enter text here');
+  // CSS
+  // font-size
+  input.style.color = 'purple';
+  input.style.fontSize = '20px';
+  input.style.border = '2px solid black';
+  input.style.outline = 'none'
+
+  const displayDate = () => {
+    document.getElementById('date').innerHTML = new Date();
+  }
+
+  const newElement = document.createElement('h1');
+  const newElement1 = document.createElement('h1');
+  const newElement2 = document.createElement('h1');
+  console.log(newElement)
+  newElement.innerHTML = 'New Element';
+  newElement1.innerHTML = 'New Element';
+  newElement2.innerHTML = 'New Element';
+  document.body.appendChild(newElement);
+
+  document.getElementById('container').appendChild(newElement1)
+  document.getElementById('container1').appendChild(newElement2)
+  document.getElementById('container1').removeChild(newElement2)
+  const mcd = document.getElementById('mcd');
+  mcd.removeChild(mcd.firstElementChild)
+  mcd.removeChild(mcd.children[1])
+  // document.body.removeChild(mcd)
+</script>
+</html>
