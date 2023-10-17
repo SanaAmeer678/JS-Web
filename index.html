@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT 1
+    </title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        #message-container {
+            margin-top: 20px;
+            font-size: 18px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 1</h1>
+    <p>Use document.getElementById(id) to find an element with a specific ID and store it in a variable.</p>
+    <h2 id="title"></h2>
+
+    <h1>Task 2</h1>
+    <p>Utilize document.getElementsByTagName(name) to find all 
+    elements with a specific tag name and log them to the console.</p>
+
+    <h1>Task 3</h1>
+    <p>Use document.getElementsByClassName(name) to find all elements 
+    with a specific class name and apply a CSS style to each of them.
+    </p>
+    <p class="text" style="font-size: 20px;color: blueviolet;">10</p>
+    <p class="text" style="font-size: 20px;color: rgba(18, 61, 4, 0.808);">20</p>
+    <p class="text" style="font-size: 20px;color: rgb(120, 104, 135);">30</p>
+    <p class="text" style="font-size: 20px;color: rgba(17, 4, 56, 0.379);">40</p>
+    <p class="text" style="font-size: 20px;color: rgb(192, 144, 237);">50</p>
+
+    <h1>TASK 4</h1>
+    <p>Change the inner HTML of an element with element.innerHTML 
+    to display new content when a button is clicked.</p>
+    <p id="content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+
+    <h1>Task 5</h1>
+    <p>Update the value of an attribute in an HTML element using the element.attribute 
+     property based on user input.</p>
+    <input id='name' type="text">
+
+    <h1>Task 6</h1>
+    <p id="style" style="font-size: 20px;">Create a function that changes the background color of an element 
+    using the element.style.property.</p>
+
+    <h1>Task 7</h1>
+    <p>Create a button that, when clicked, uses element.setAttribute(attribute, value)
+    to modify the 'src' attribute of an image.</p>
+    <img id="myImage" style="width: 300px; height: 200px;" src="q.jpg" alt="Original Image">
+    <button id="changeButton">Change Image Source</button>
+
+    <h1>Task 8</h1>
+     <p>Develop a form where users can input their name and a message. 
+      On submission, use element.innerHTML to display a personalized message.</p>
+      <form id="message-form">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="message">Message:</label>
+        <textarea id="message" rows="4" required></textarea>
+        <br></br>
+        <button type="submit" style="border-color: hwb(0 5% 10%);">Submit</button>
+    </form>
+    <div id="message-container"></div>
+    
+    <h1>Task 9</h1>
+    <p>Build a list of items with checkboxes. When a checkbox is clicked, use element.style.
+    property to strike through the item's text.</p>
+    <h2>item-list</h2>
+    <ul id="item-list" class="strikethrough ">
+        <li>
+            <input type="checkbox" class="strikethrough">
+            <span class="item-text">Item 1</span>
+        </li>
+        <li>
+            <input type="checkbox" class="strikethrough">
+            <span class="item-text">Item 2</span>
+        </li>
+        <li>
+            <input type="checkbox" class="strikethrough">
+            <span class="item-text">Item 3</span>
+        </li>
+    </ul>
+    
+    <h1>Task 10</h1>
+    <p>Use document.createElement(element) to create a new paragraph element and append it to an existing div.
+    </p>
+    <div id="existing-div"></div>
+   
+    <h1>Task 11</h1>
+    <p>Create a button that, when clicked, removes a specific list item using document.
+    removeChild(element).</p>
+    <h1>List of Items</h1>
+  <ul id="itemList">
+    <li>Item 1 <button onclick="removeItem(this)">Remove</button></li>
+    <li>Item 2 <button onclick="removeItem(this)">Remove</button></li>
+    <li>Item 3 <button onclick="removeItem(this)">Remove</button></li>
+  </ul>
+
+ 
+  <h1>Task 12</h1>
+  <p>Implement a feature that adds a new list item to an existing unordered list using 
+    document.appendChild(element).</p>
+  <h1>My List</h1>
+ <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+ </ul>
+ <button id="addItemButton">Add Item</button>
+
+ <h1>Task 13</h1>
+ <p>Replace an existing image on a webpage with a new image by using document.replaceChild(new, old).</p>
+ <div id="imageContainer"  style="height: auto; width: auto;">
+    <img id="oldImage" src="q.jpg" alt="Old Image">
+  </div>
+
+
+  <h1>Task 14</h1>
+  <p>Design a page with two sections. Upon clicking a button, 
+ swap the positions of these sections using the document.replaceChild(new, old) method.</p>
+ <div id="container">
+    <div class="section" id="section1">
+      <h2>Section 1</h2>
+      <p>This is the first section.</p>
+    </div>
+    <div class="section" id="section2">
+      <h2>Section 2</h2>
+      <p>This is the second section.</p>
+    </div>
+    <button id="swapButton">Swap Sections</button>
+  </div>
+  
+
+  <h1>Task 15</h1>
+  <p>Create a simple website layout with placeholders. Use JavaScript to 
+ replace these placeholders with actual content using document.replaceChild(new, old).</p>
+ <header>
+    <h1 id="headerPlaceholder">Header Placeholder</h1>
+  </header>
+  <main>
+    <div id="contentPlaceholder">
+      <p>This is the main content section. Placeholder text will be replaced.</p>
+    </div>
+  </main>
+  <footer>
+    <p id="footerPlaceholder">Footer Placeholder</p>
+  </footer>
+
+
+  <h1>Task 16</h1>
+  <p>Create a button on a webpage. Attach an event listener using addEventListener to 
+    change the button's text to "Clicked!" when it's clicked.</p>
+    <button id="myButton">Click me</button>
+ 
+
+    <h1>Task 17</h1>
+    <p>Design an image that changes its source to another image when hovered over by the mouse pointer.
+     Use the mouseover and mouseout events to achieve this effect</p>
+    <div class="image-container" style="width: 300px;">
+     <img id="changing-image" style="width: 300px; height: auto; "src="image (3).jpg" alt="Image 1">
+      </div>
+
+     
+      <h1>Task 18</h1>
+      <h1>Registration Form</h1>
+ <form id="registrationForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required><br><br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required><br>
+  <span class="error-message" id="passwordError"></span><br><br>
+  <button type="submit">Register</button>
+</form>
+
+    <script>
+    const ID= document.getElementById("title").innerHTML="Get element by ID"
+    console.log(ID);
+</script>
+
+<script>
+    const h1 = document.getElementsByTagName('h1')
+    console.log(h1)
+</script>
+
+<script>
+    console.log(document.getElementsByClassName("text"))
+</script>
+
+
+<script>
+    function myFunction() {
+    document.getElementById("content").innerHTML = "Paragraph changed.";}
+</script>
+
+<script>
+    const input = document.getElementById('name');
+    input.setAttribute('placeholder','First-Name')
+</script>
+
+<script>
+    function background(element,color){
+        element.style.backgroundColor = color;        
+    }
+    const changeColor = document.getElementById("style");
+    background(style,"blue")
+</script>
+
+<script>
+    document.getElementById("changeButton").addEventListener("click", function() {
+    var image = document.getElementById("myImage");
+    image.setAttribute("src", "review.jpg");
+    });
+</script>
+  
+<script>
+    document.getElementById("message-form").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            var name = document.getElementById("name").value;
+            var message = document.getElementById("message").value;
+            var personalizedMessage = "Hello, " + name + "! Your message: " + message;
+            var messageContainer = document.getElementById("message-container");
+            messageContainer.innerHTML = personalizedMessage;
+    });
+</script>
+
+<script>
+    var checkboxes = document.querySelectorAll(".strikethrough");
+     checkboxes.forEach(function(checkbox) {
+    checkbox.addEventListener("change", function() {
+        var itemText = checkbox.nextElementSibling;
+        if (checkbox.checked) {
+            itemText.classList.add("strikethrough");
+        } else {
+            itemText.classList.remove("strikethrough");
+        }
+    });
+});
+</script>
+
+
+<script>
+   var newParagraph = document.createElement("p");
+   newParagraph.textContent = "This is a new paragraph.";
+   var existingDiv = document.getElementById("existing-div");
+   existingDiv.appendChild(newParagraph);
+</script>
+
+<script>
+   function removeItem(button) {
+      var listItem = button.parentNode; 
+      var itemList = document.getElementById("itemList"); 
+      itemList.removeChild(listItem); 
+    }
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const addButton = document.getElementById("addItemButton");
+    const list = document.getElementById("myList");
+    addButton.addEventListener("click", function() {
+        const newItem = document.createElement("li");
+        newItem.textContent = "New Item";
+        list.appendChild(newItem);
+    });
+});
+</script>
+
+
+<script>
+ const oldImageElement = document.getElementById("oldImage");
+    const newImageElement = document.createElement("img");
+    newImageElement.src = "nanam.jpg.webp";
+    newImageElement.alt = "New Image";
+    const imageContainer = document.getElementById("imageContainer");
+    imageContainer.replaceChild(newImageElement, oldImageElement);
+</script>
+
+
+<script>
+    const section1 = document.getElementById('section1');
+  const section2 = document.getElementById('section2');
+  const swapButton = document.getElementById('swapButton');
+  swapButton.addEventListener('click', () => {
+    section1.parentNode.replaceChild(section2, section1);
+    section2.parentNode.insertBefore(section1, section2);
+  });
+</script>
+ 
+
+<script>
+  const headerPlaceholder = document.getElementById('headerPlaceholder');
+    const newHeader = document.createElement('h1');
+    newHeader.textContent = 'Welcome to Our Website';
+    document.replaceChild(newHeader, headerPlaceholder);
+    const contentPlaceholder = document.getElementById('contentPlaceholder');
+    const newContent = document.createElement('p');
+    newContent.textContent = 'This is the actual content of our website.';
+    document.replaceChild(newContent, contentPlaceholder);
+    const footerPlaceholder = document.getElementById('footerPlaceholder');
+    const newFooter = document.createElement('p');
+    newFooter.textContent = '© 2023 Our Website. All rights reserved.';
+    document.replaceChild(newFooter, footerPlaceholder);
+  </script>
+     
+
+     <script>
+    var button = document.getElementById("myButton");
+   button.addEventListener("dbclick", function() {
+  button.textContent = "Clicked!";
+  });
+</script>
+
+<script>
+ <div src="review.jpg"></div>
+ const changingImage = document.getElementById('changing-image');
+const initialImageSrc = changingImage.src;
+const newImageSrc = 'review.jpg';
+changingImage.addEventListener('mouseover', () => {
+  changingImage.src = newImageSrc;
+});
+changingImage.addEventListener('mouseout', () => {
+  changingImage.src = initialImageSrc;
+});
+</script>
+
+<script>
+document.getElementById("registrationForm").addEventListener("submit", function(event) {
+  const passwordInput = document.getElementById("password");
+  const passwordError = document.getElementById("passwordError");
+  if (passwordInput.value.length < 8) {
+    event.preventDefault(); 
+    passwordError.textContent = "Password must be at least 8 characters long.";
+  } else {
+    passwordError.textContent = "";
+  }
+});
+    </script>
+</body>
+</html>
